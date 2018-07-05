@@ -1,0 +1,34 @@
+
+.cube {
+  position: absolute;
+  transform-style: preserve-3d; 
+  animation: rotation 20s infinite linear; 
+  transition: all 2s;;
+} 
+
+@keyframes rotation { 
+  12% {transform: rotateX(90deg) rotateY(45deg)}
+  25% {transform: rotateX(180deg) rotateY(90deg)}
+  37% {transform: rotateX(270deg) rotateY(135deg)}
+  50% {transform: rotateX(360deg) rotateY(180deg)}
+  62% {transform: rotateX(450deg) rotateY(225deg)}
+  75% {transform: rotateX(540deg) rotateY(270deg)}
+  87% {transform: rotateX(630deg) rotateY(315deg)}
+  100% {transform: rotateX(720deg) rotateY(360deg)} 
+}
+
+.face {
+    display: block;
+    position: absolute;
+    opacity: .88; 
+    transition: all 2s;;
+}
+
+
+  .front {  background: #8276C6;/*red*/; } 
+  .back { background: #00C8FF;/*teal*/; } 
+  .left {  background: #C6778A;/*pink*/; }
+  .right { background: #EB0081;/*hot pink*/; } 
+  .top  {     background: #00EB8E;/*turqouise*/; } 
+  .bottom  { background: #336DFF;/*blue*/; }
+

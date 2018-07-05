@@ -1,0 +1,182 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: white;
+  color: black;
+	overflow-x: hidden;
+  font-size: 16px;
+} 
+
+h0 {
+	color: black;
+}
+
+video {
+  margin: auto;
+  margin-bottom: 50px;
+} 
+a {
+  color: #3FFC00;
+}
+
+@media (min-width: 320px) { 
+
+a {
+  font-size: 18px;
+} 
+
+  .video {
+    width: 300px;
+  } 
+
+ .section {
+  width: 300px;
+ }
+
+ .link-about {
+    left: 20%; 
+  }
+
+  .link-portfolio {
+    left: 50%; 
+  }
+
+  .link-contact {
+    left: 80%; 
+  } 
+
+  .cube.Home {
+    top: 61%;
+    left: 50%;
+  }
+
+  .cube.About {
+    top: 14%;
+    left: 20%;
+  }
+
+  .cube.Portfolio {
+    top: 14%;
+    left: 50%;
+  }
+
+  .cube.Contact {
+    top: 14%;
+    left: 80%;
+  }
+
+}
+
+@media (min-width: 414px) { 
+  .section {
+     width: 375px
+  } 
+  .video {
+     width: 375px
+  } 
+
+}
+
+@media (min-width: 768px) { 
+
+  .video {
+    width: 600px;
+  } 
+
+  .section {
+    width: 600px;
+   }
+
+  .link-about {
+    left: 33%; 
+  }
+
+  .link-portfolio {
+    left: 50%; 
+  }
+
+  .link-contact {
+    left: 66%; 
+  } 
+
+  .cube.Home {
+    top: 61%;
+    left: 50%;
+  }
+
+  .cube.About {
+    top: 14%;
+    left: 33%;
+  }
+
+  .cube.Portfolio {
+    top: 14%;
+    left: 50%;
+  }
+
+  .cube.Contact {
+    top: 14%;
+    left: 66%;
+  }
+
+}
+
+
+@media (min-width: 1024px) { 
+
+a {
+  font-size: 22px;
+} 
+
+   body {
+    font-size: 18px;
+  }
+  .section {
+    width: 800px;
+   } 
+   .video {
+    width: 800px;
+   }
+}
+
+
+
+.links { 
+  text-align: center;
+}
+
+.link {
+  position: absolute;
+  top: 5%;
+}
+
+ 
+.center {
+	position: absolute;
+	top: 20%;
+	left: 50%; 
+	transition: left 2s, top 2s;
+	display: block;
+}
+
+.off {
+	display: none; 
+}
+
+.on {
+	display: block; 
+}
+.off-left {
+	position: absolute;
+	top: 20%;
+	left: -50%; 
+	transition: all 2s;
+}
+
+.off-right {
+	position: absolute;
+	top: 20%;
+	left: 150%; 
+	transition: all 2s;
+}
