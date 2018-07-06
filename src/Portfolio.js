@@ -35,14 +35,14 @@ class Portfolio extends Component {
 					The first video features earlier work for students, non-profits, and artists. There, he gained experience design, animation, and photography.  
 					</div><br /><br />
 					<video className="video" controls>
-						<source src="./videos/part-1.webm" type="video/webm" />	
+						<source src="./videos/part_1.mp4" type="video/mp4" />	
 					</video><br /><br />
 <div> 
-						This second video features recent experiental work. The first clip is a canvas-drawing SMS photo app for touchscreen kiosks. The next two are augmented reality experiences running on a custom operating system. 
+						This second video features recent experiental work. The first clip is a canvas-drawing SMS photo app for touchscreen kiosks. The next two are accelerometer-driven augmented reality experiences running on a custom operating system. 
 					</div><br /><br />
 
 					<video className="video" controls>
-						<source src="./videos/part-2.webm" type="video/webm" />	
+						<source src="./videos/part_2.mp4" type="video/mp4" />	
 					</video> 
 				</div>
 			)
