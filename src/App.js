@@ -3,6 +3,7 @@ import update from 'immutability-helper'
 import Section from './Section'
 import Cube from './Cube'
 import Nav from './Nav'
+import Stars from './Stars'
 import './index.css'
 import './Cube.css'
 
@@ -101,6 +102,7 @@ class App extends Component {
 			<Nav onClick={this.onClick} section={this.state.section} />
       <Cube section={this.state.section} clientHeight={this.state.clientHeight}/>
       <Section clientWidth={this.state.clientWidth} sections={this.state.sections} section={this.state.section} />
+			<Stars />
     </div>
     );
   }

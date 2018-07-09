@@ -25,7 +25,8 @@ class Contact extends Component {
 
 			return (
         <div style={styles} ref={this.ref} className={`${this.props.display} ${this.props.position} section`}>
-				  Email: jeremy.burr73@gmail.com
+				  Email: jeremy.burr73@gmail.com<br />
+					GitHub: <a className="github" href="https://github.com/jeremyburr">https://github.com/jeremyburr</a>
 				</div>
 			)
   }

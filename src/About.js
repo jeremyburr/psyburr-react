@@ -26,9 +26,7 @@ class About extends Component {
 			return ( 
 				<div style={styles} ref={this.ref} className={`${this.props.display} ${this.props.position} section`}>
 					<h1 style={{textAlign: 'center'}}>About</h1><br />
-					Jeremy is a front end developer in New York City. He taught himself to code in college, developing and designing websites for students, artists, and small non-profits. He then worked as a contractor for various advertising companies, progressing from simple HTML emails, banner animations, and responsive microwebsites, to more demanding front-end applications running on specialized platforms.
-<br /><br /> 
-				This site is written in React.
+					Jeremy is a front end developer in New York City. He taught himself to code in college, and started building websites. He went on to work as a contractor for advertising companies, gaining wider exposure to the world of front-end development. He regularly pushes his limits, and is interested in the full stack. This site is written in React.
 				</div>
 			)
   }

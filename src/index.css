@@ -18,6 +18,16 @@ video {
 } 
 a {
   color: #3FFC00;
+	text-decoration: none;
+}
+
+a.visited {
+	text-decoration: none;
+}
+
+a.github {
+	color: #42d1f4;
+	font-size: 18px;
 }
 
 @media (min-width: 320px) { 
