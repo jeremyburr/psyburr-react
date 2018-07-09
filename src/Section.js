@@ -12,24 +12,24 @@ const components = {
 } 
 
 class Section extends Component { 
-					
-		renderSection(Name) { 
+          
+    renderSection(Name) { 
 
-			const ComponentName = components[Name];
+      const ComponentName = components[Name];
       const display = this.props.sections[Name].display;
       const position = this.props.sections[Name].position;
 
-			return (
-				<div>
-					<ComponentName key={Name} clientWidth={this.props.clientWidth} position={position} display={display} /> 
-				</div>
-			) 
+      return (
+        <div>
+          <ComponentName key={Name} clientWidth={this.props.clientWidth} position={position} display={display} /> 
+        </div>
+      ) 
 
-		} 
+    } 
 
-		render() { 
+    render() { 
 
-			return (
+      return (
         <div>
           {this.renderSection("Home")}
           {this.renderSection("About")}
@@ -37,7 +37,7 @@ class Section extends Component {
           {this.renderSection("Portfolio")}
         </div>
       )
-		} 
+    } 
 } 
 
 export default Section
