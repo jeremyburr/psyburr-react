@@ -4,12 +4,12 @@ body {
   font-family: sans-serif;
   background: black;
   color: white;
-	overflow-x: hidden;
+  overflow-x: hidden;
   font-size: 16px;
 } 
 
 h0 {
-	color: black;
+  color: black;
 }
 
 video {
@@ -18,16 +18,16 @@ video {
 } 
 a {
   color: #3FFC00;
-	text-decoration: none;
+  text-decoration: none;
 }
 
 a.visited {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 a.github {
-	color: #42d1f4;
-	font-size: 18px;
+  color: #42d1f4;
+  font-size: 18px;
 }
 
 @media (min-width: 320px) { 
@@ -163,30 +163,30 @@ a {
 
  
 .center {
-	position: absolute;
-	top: 20%;
-	left: 50%; 
-	transition: left 2s, top 2s;
-	display: block;
+  position: absolute;
+  top: 20%;
+  left: 50%; 
+  transition: left 2s, top 2s;
+  display: block;
 }
 
 .off {
-	display: none; 
+  display: none; 
 }
 
 .on {
-	display: block; 
+  display: block; 
 }
 .off-left {
-	position: absolute;
-	top: 20%;
-	left: -50%; 
-	transition: all 2s;
+  position: absolute;
+  top: 20%;
+  left: -50%; 
+  transition: all 2s;
 }
 
 .off-right {
-	position: absolute;
-	top: 20%;
-	left: 150%; 
-	transition: all 2s;
+  position: absolute;
+  top: 20%;
+  left: 150%; 
+  transition: all 2s;
 }

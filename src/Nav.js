@@ -1,51 +1,51 @@
 import React, { Component } from 'react'
 
 class Nav extends Component {
-	constructor() {
-		super();
-	  this.state =  {
-			marginLeft: null
-		}
-		this.aboutRef = React.createRef();
-		this.portfolioRef = React.createRef();
-		this.contactRef = React.createRef();
-		this.setMargins = this.setMargins.bind(this);
-	}
+  constructor() {
+    super();
+    this.state =  {
+      marginLeft: null
+    }
+    this.aboutRef = React.createRef();
+    this.portfolioRef = React.createRef();
+    this.contactRef = React.createRef();
+    this.setMargins = this.setMargins.bind(this);
+  }
 
-		setMargins() {
-				const aboutMargin = this.state.aboutMargin !== this.aboutRef.current.offsetWidth/2*-1;
-				const portfolioMargin = this.state.portfolioMargin !== this.portfolioRef.current.offsetWidth/2*-1;
-				const contactMargin = this.state.contactMargin !== this.contactRef.current.offsetWidth/2*-1;
+    setMargins() {
+        const aboutMargin = this.state.aboutMargin !== this.aboutRef.current.offsetWidth/2*-1;
+        const portfolioMargin = this.state.portfolioMargin !== this.portfolioRef.current.offsetWidth/2*-1;
+        const contactMargin = this.state.contactMargin !== this.contactRef.current.offsetWidth/2*-1;
 
-			if (aboutMargin && portfolioMargin && contactMargin) {
-				this.setState({
-				aboutRef: this.aboutRef.current.offsetWidth/2*-1,
-				portfolioRef: this.portfolioRef.current.offsetWidth/2*-1,
-				contactRef: this.contactRef.current.offsetWidth/2*-1
-				}) 
-			}
-		}
+      if (aboutMargin && portfolioMargin && contactMargin) {
+        this.setState({
+        aboutRef: this.aboutRef.current.offsetWidth/2*-1,
+        portfolioRef: this.portfolioRef.current.offsetWidth/2*-1,
+        contactRef: this.contactRef.current.offsetWidth/2*-1
+        }) 
+      }
+    }
 
-		componentDidMount() {
-			this.setState({
-				aboutMargin: this.aboutRef.current.offsetWidth/2*-1,
-				portfolioMargin: this.portfolioRef.current.offsetWidth/2*-1,
-				contactMargin: this.contactRef.current.offsetWidth/2*-1
-			})
-			window.addEventListener("resize", this.setMargins);
-		} 
+    componentDidMount() {
+      this.setState({
+        aboutMargin: this.aboutRef.current.offsetWidth/2*-1,
+        portfolioMargin: this.portfolioRef.current.offsetWidth/2*-1,
+        contactMargin: this.contactRef.current.offsetWidth/2*-1
+      })
+      window.addEventListener("resize", this.setMargins);
+    } 
 
   render() {
 
-		const aboutMargin = {
-			marginLeft: this.state.aboutMargin 
-		}
-		const portfolioMargin = {
-			marginLeft: this.state.portfolioMargin 
-		}
-		const contactMargin = {
-			marginLeft: this.state.contactMargin 
-		} 
+    const aboutMargin = {
+      marginLeft: this.state.aboutMargin 
+    }
+    const portfolioMargin = {
+      marginLeft: this.state.portfolioMargin 
+    }
+    const contactMargin = {
+      marginLeft: this.state.contactMargin 
+    } 
 
     return ( 
       <div className="links">
