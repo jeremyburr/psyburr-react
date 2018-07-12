@@ -9,7 +9,7 @@ class Portfolio extends Component {
     }
 
     setMargin() { 
-        this.setState({marginLeft: this.ref.current.offsetWidth}) 
+       this.setState({marginLeft: this.ref.current.offsetWidth}) 
     }
 
     componentDidMount() {
@@ -32,7 +32,7 @@ class Portfolio extends Component {
             <h1 style={{textAlign: 'center'}}>Portfolio</h1>
           <div> 
             
-          The first video features earlier work in microwebsites, animation, design, and photgraphy.
+          The first video features earlier work in microwebsites, animation, design, and photography.
           </div><br /><br />
           <video className="video" controls>
             <source src="./videos/part_1.mp4" type="video/mp4" />  

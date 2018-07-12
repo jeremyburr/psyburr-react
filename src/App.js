@@ -38,15 +38,17 @@ class App extends Component {
       order: ["Home","About","Portfolio","Contact"],
       section: "Home",
       clientHeight: null,
-      clientWidth: null
+      clientWidth: null,
+      orientation: null
     }
     this.updateDimensions = this.updateDimensions.bind(this);
     this.onClick = this.onClick.bind(this);
   } 
   updateDimensions() {
-    var clientHeight = document.documentElement.clientHeight;
-    var clientWidth = document.documentElement.clientWidth;
-    this.setState({clientHeight, clientWidth}); 
+    const clientHeight = document.documentElement.clientHeight;
+    const clientWidth = document.documentElement.clientWidth;
+    const orientation = clientWidth < clientHeight ? "portrait" : "landscape";
+    this.setState({clientHeight, clientWidth, orientation}); 
   }
 
   onClick(section) { 
@@ -94,13 +96,16 @@ class App extends Component {
   }
   componentDidMount() {
     window.addEventListener("resize", this.updateDimensions);
+  }
+  componentDidUpdate() {
+    console.log(this.state);
   } 
 
   render() {
     return (
     <div> 
-      <Nav onClick={this.onClick} section={this.state.section} />
-      <Cube section={this.state.section} clientHeight={this.state.clientHeight}/>
+      <Nav orientation={this.state.orientation} onClick={this.onClick} section={this.state.section} />
+      <Cube orientation={this.state.orientation} section={this.state.section} clientHeight={this.state.clientHeight} clientWidth={this.state.clientWidth} />
       <Section clientWidth={this.state.clientWidth} sections={this.state.sections} section={this.state.section} />
       <Stars />
     </div>

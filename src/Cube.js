@@ -1,15 +1,8 @@
-import React, { Component } from 'react'
-
+import React, { Component } from 'react' 
 class Face extends Component {
-  render() {
-
-    let faceHeight = null;
-    if (this.props.section === "Home") {
-      faceHeight = this.props.clientHeight / 7;
-    }
-    else {
-      faceHeight = this.props.clientHeight / 24;
-    }
+  render() { 
+    const baseLength = this.props.orientation === "portrait" ? this.props.clientWidth : this.props.clientHeight 
+    let faceHeight = this.props.section === "Home" ? baseLength / 6 : baseLength / 16;
 
     const faceTransforms = {
       left: 'rotateX(270deg) rotateY(180deg) rotateZ(0deg)',
@@ -36,20 +29,14 @@ class Face extends Component {
 class Cube extends Component {
   renderFace(position) {
     return (
-      <Face position={position} section={this.props.section} sections={this.props.sections} clientHeight = {this.props.clientHeight} />
+      <Face orientation={this.props.orientation} position={position} section={this.props.section} sections={this.props.sections} clientWidth = {this.props.clientWidth} clientHeight = {this.props.clientHeight} />
     )
   } 
 
   render() { 
-    
 
-    let cubeHeight = null;
-    if (this.props.section === "Home") {
-      cubeHeight = this.props.clientHeight / 6;
-    }
-    else {
-      cubeHeight = this.props.clientHeight / 24;
-    }
+    const baseLength = this.props.orientation === "portrait" ? this.props.clientWidth : this.props.clientHeight 
+    let cubeHeight = this.props.section === "Home" ? baseLength / 6 : baseLength / 16;
 
 
     const cubeStyle = {
@@ -63,7 +50,7 @@ class Cube extends Component {
 
     return (
       <div> 
-        <div style={cubeStyle} className={`cube ${this.props.section}`}>
+        <div style={cubeStyle} className={`cube ${this.props.section} ${this.props.orientation}`}>
           {this.renderFace("left")}
           {this.renderFace("right")}
           {this.renderFace("top")}

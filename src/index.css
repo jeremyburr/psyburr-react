@@ -13,8 +13,8 @@ h0 {
 }
 
 video {
-  margin: auto;
-  margin-bottom: 50px;
+  margin: 0px auto 50px auto;
+	display: block;
 } 
 a {
   color: #3FFC00;
@@ -56,36 +56,43 @@ a {
     left: 80%; 
   } 
 
+	.cube.portrait {
+		top: 14%; 
+	}
+
+	.cube.landscape {
+		top: 17%; 
+	}
+
   .cube.Home {
     top: 61%;
     left: 50%;
   }
 
   .cube.About {
-    top: 14%;
     left: 20%;
   }
 
   .cube.Portfolio {
-    top: 14%;
     left: 50%;
   }
 
   .cube.Contact {
-    top: 14%;
     left: 80%;
   }
 
 }
 
 @media (min-width: 414px) { 
-  .section {
-     width: 375px
+  .section, .video {
+     width: 90%;
   } 
-  .video {
-     width: 375px
-  } 
+} 
 
+@media (min-width: 550px) { 
+  .section, .video {
+     width: 75%;
+  } 
 }
 
 @media (min-width: 768px) { 
@@ -111,22 +118,18 @@ a {
   } 
 
   .cube.Home {
-    top: 61%;
     left: 50%;
   }
 
   .cube.About {
-    top: 14%;
     left: 33%;
   }
 
   .cube.Portfolio {
-    top: 14%;
     left: 50%;
   }
 
   .cube.Contact {
-    top: 14%;
     left: 66%;
   }
 
