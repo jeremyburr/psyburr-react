@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 class Face extends Component {
   render() { 
     const baseLength = this.props.orientation === "portrait" ? this.props.clientWidth : this.props.clientHeight 
-    let faceHeight = this.props.section === "Home" ? baseLength / 6 : baseLength / 16;
+    let faceHeight = this.props.section === "Home" ? baseLength / 6 : baseLength / 18;
 
     const faceTransforms = {
       left: 'rotateX(270deg) rotateY(180deg) rotateZ(0deg)',
@@ -36,7 +36,7 @@ class Cube extends Component {
   render() { 
 
     const baseLength = this.props.orientation === "portrait" ? this.props.clientWidth : this.props.clientHeight 
-    let cubeHeight = this.props.section === "Home" ? baseLength / 6 : baseLength / 16;
+    let cubeHeight = this.props.section === "Home" ? baseLength / 6 : baseLength / 18;
 
 
     const cubeStyle = {
