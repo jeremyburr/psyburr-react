@@ -56,13 +56,13 @@ a {
     left: 80%; 
   } 
 
-	.cube.portrait {
-		top: 14%; 
-	}
+  .cube.portrait {
+  top: 14%; 
+  }
 
-	.cube.landscape {
-		top: 17%; 
-	}
+  .cube.landscape {
+  top: 17%; 
+  }
 
   .cube.Home {
     top: 61%;
