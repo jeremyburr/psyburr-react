@@ -21,7 +21,7 @@ class Section extends Component {
 
       return (
         <div>
-          <ComponentName key={Name} clientWidth={this.props.clientWidth} position={position} display={display} /> 
+          <ComponentName key={Name} clientHeight={this.props.clientheight} clientWidth={this.props.clientWidth} position={position} display={display} /> 
         </div>
       ) 
 

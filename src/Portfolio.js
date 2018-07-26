@@ -24,9 +24,13 @@ class Portfolio extends Component {
     }
 
     render() { 
+			console.log(this.props.clientHeight);
       const styles = {
         marginLeft: this.state.marginLeft/2*-1+"px"
       }  
+			const video2Styles = {
+				maxHeight: this.props.clientHeight * .80
+			}
       return (
       <div style={styles} ref={this.ref} className={`${this.props.display} ${this.props.position} section`}> 
             <h1 style={{textAlign: 'center'}}>Portfolio</h1>
@@ -38,11 +42,11 @@ class Portfolio extends Component {
             <source src="./videos/part_1.mp4" type="video/mp4" />  
           </video><br /><br />
 <div> 
-            This second video features recent experiental work. The first clip is a canvas-drawing SMS photo app running on a proprietary media player for touchscreen kiosks. The next two are accelerometer-driven augmented reality experiences running on a custom operating system. 
+            This second video features recent experiential work. The first clip is a canvas-drawing SMS photo app running on a proprietary media player for touchscreen kiosks. The next two are accelerometer-driven augmented reality experiences running on a custom operating system. 
           </div><br /><br />
 
-          <video className="video" controls>
-          <source src="./videos/part_2.mp4" type="video/mp4" />  
+          <video style={video2Styles} className="video" controls>
+						<source src="./videos/part_2.mp4" type="video/mp4" />  
           </video> 
         </div>
       )

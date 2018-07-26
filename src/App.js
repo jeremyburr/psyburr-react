@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+//import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import update from 'immutability-helper'
 import Section from './Section'
 import Cube from './Cube'
@@ -6,7 +7,6 @@ import Nav from './Nav'
 import Stars from './Stars'
 import './index.css'
 import './Cube.css'
-
 // position (or display) need not be in state?
 
 class App extends Component {
@@ -37,6 +37,7 @@ class App extends Component {
       },
       order: ["Home","About","Portfolio","Contact"],
       section: "Home",
+      nextSection: null,
       clientHeight: null,
       clientWidth: null,
       orientation: null
@@ -52,6 +53,8 @@ class App extends Component {
   }
 
   onClick(section) { 
+    this.setState({nextSection: section});
+    if (this.state.nextSection == section) return;
     let from = this.state.sections[this.state.section].index;
     let to = this.state.sections[section].index; 
     let difference = from - to; 
@@ -106,7 +109,7 @@ class App extends Component {
     <div> 
       <Nav orientation={this.state.orientation} onClick={this.onClick} section={this.state.section} />
       <Cube orientation={this.state.orientation} section={this.state.section} clientHeight={this.state.clientHeight} clientWidth={this.state.clientWidth} />
-      <Section clientWidth={this.state.clientWidth} sections={this.state.sections} section={this.state.section} />
+      <Section clientheight={this.state.clientHeight} clientWidth={this.state.clientWidth} sections={this.state.sections} section={this.state.section} />
       <Stars />
     </div>
     );
