@@ -12,6 +12,14 @@ h0 {
   color: black;
 }
 
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
 video {
   margin: 0px auto 50px auto;
   display: block;

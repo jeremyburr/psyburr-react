@@ -16,12 +16,13 @@ class Home extends Component {
 
     render() { 
       const styles = {
-        marginLeft: this.state.marginLeft
+        marginLeft: this.state.marginLeft,
+        fontWeight: "normal" 
       }
 
       return (
         <div style={styles} ref={this.ref} className={`${this.props.display} ${this.props.position}`}>
-         <h1>PsyBurr</h1>
+         <h1>Welcome to PsyBurr Space </h1>
         </div>
       )
   }
