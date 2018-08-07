@@ -22,7 +22,8 @@ class Home extends Component {
 
       return (
         <div style={styles} ref={this.ref} className={`${this.props.display} ${this.props.position}`}>
-         <h1>Welcome to PsyBurr Space </h1>
+          <h1>Welcome to PsyBurr Space</h1>
+          <h3 style={{textAlign: "center"}}>Jeremy Burr's Programming Website</h3>
         </div>
       )
   }
