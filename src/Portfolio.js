@@ -42,7 +42,7 @@ class Portfolio extends Component {
             <source src="./videos/part_1.mp4" type="video/mp4" />  
           </video><br /><br />
 <div> 
-            This second video features recent experiential work. The first clip is a canvas-drawing SMS photo app running on a proprietary media player for touchscreen kiosks. The next two are accelerometer-driven augmented reality experiences running on a custom operating system. 
+            This second video features later experiential work. The first clip is a canvas-drawing photo application. The remaining are accelerometer-driven augmented reality experiences.
           </div><br /><br />
 
           <video style={video2Styles} className="video" controls>
